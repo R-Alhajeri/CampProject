@@ -1,0 +1,81 @@
+<% layout('layouts/boilerplate') %>
+<div class="row">
+  <h1 class="text-center">New Campground</h1>
+  <div class="col-6 offset-3">
+    <form
+      action="/campgrounds"
+      method="POST"
+      novalidate
+      class="validated-forms"
+    >
+      <div class="mb-3">
+        <label class="for-label" for="title">Title</label>
+        <input
+          class="form-control"
+          type="text"
+          id="title"
+          name="campground[title]"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="for-label" for="location">location</label>
+        <input
+          class="form-control"
+          type="text"
+          id="location"
+          name="campground[location]"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="mb-3">
+        <label class="for-label" for="image">Image Url</label>
+        <input
+          class="form-control"
+          type="text"
+          id="image"
+          name="campground[image]"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="mb-3">
+        <label class="for-label" for="description">Description</label>
+        <textarea
+          class="form-control"
+          type="text"
+          id="description"
+          name="campground[description]"
+          required
+        ></textarea>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="mb-3">
+        <label class="for-label" for="price">Campground Price</label>
+        <div class="input-group">
+          <span class="input-group-text" id="price-lable">$</span>
+          <input
+            type="text"
+            id="price"
+            placeholder="0"
+            class="form-control"
+            aria-label="price-lable"
+            name="campground[price]"
+            required
+          />
+          <span class="input-group-text">.00</span>
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <button class="btn-success">Add Campground</button>
+      </div>
+    </form>
+
+    <a href="/campgrounds">All Campgrounds</a>
+  </div>
+</div>
